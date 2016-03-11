@@ -32,19 +32,69 @@
                 </button>
                   <a id="navbar-brand-pokedex" class="navbar-brand" href="<?= \PoireauFramework\Helper\Url::base()?>">Pokiut Api Pokedex</a>
               </div>
-              <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
-                    <div class="form-group">
-                      <input placeholder="pseudo" class="form-control" type="text">
-                    </div>
-                    <div class="form-group">
-                      <input placeholder="Password" class="form-control" type="password">
-                    </div>
-                    <button id="bouton-connexion-pokedex" type="submit" class="btn btn-success">Connexion</button>
-                </form>
-              </div><!--/.navbar-collapse -->
+                <div id="navbar" class="navbar-collapse collapse">
+                    <form id="form-connexion-inscription-pokedex" class="navbar-form navbar-right">
+                        <div class="form-group">
+                          <input placeholder="Pseudo" class="form-control" type="text">
+                        </div>
+                        <div class="form-group">
+                          <input placeholder="Password" class="form-control" type="password">
+                        </div>
+                        <button id="bouton-connexion-pokedex" type="submit" class="btn btn-success">Connexion</button>
+                        <button id="bouton-inscription-pokedex" type="button" class="btn btn-success" data-toggle="modal" data-target="#RegisterModal"><span class="glyphicon glyphicon-user"></span> Inscription</button>
+                    </form>
+                </div><!--/.navbar-collapse -->         
             </div>
         </nav>
+        <div class="modal fade" id="RegisterModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Pokiut APi Pokedex, inscription</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div id="page-content-wrapper">
+                          <div class="container-fluid">
+                              <div class="row">
+                                  <div class="col-lg-4-fixed">
+                                        <h2 class="text-center">Inscription</h2> 
+                                      <form id="registerForm" role="form" method="post" onsubmit="return validateForm()" action="<?= \PoireauFramework\Helper\Url::base().'account/register'?>">                                         
+                                        <div id="pseudoDiv" class="form-group">
+                                            <label class="control-label" for="pseudo">Pseudo :</label>
+                                            <input type="text" name = "pseudo" class="form-control" id="register-pseudo">
+                                        </div>
+
+                                        <div id="emailDiv" class="form-group">
+                                            <label class="control-label" for="email">Adresse email :</label>
+                                            <input type="email" name = "email" class="form-control" id="register-email">
+                                        </div>
+
+                                        <div id="passwordDiv" class="form-group">
+                                            <label class="control-label" for="pwd">Mot de passe :</label>
+                                            <input type="password" name = "password" class="form-control" id="pwd">
+                                        </div>
+
+                                        <div id="passwordConfirmDiv" class="form-group">
+                                            <label class="control-label" for="pwdConfirm">Confirmer mot de passe :</label>
+                                            <input type="password" name = "passwordConfirm" class="form-control" id="pwdConfirm">
+                                        </div>
+                                        <div class="text-center">
+                                          <button type="submit" class="btn btn-default">Créer son compte !</button>
+                                        </div>
+                                      </form>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                          <button type="button" class="btn btn-default register-button" data-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <?= $contents?>
         <footer>
             <p class="text-center"><a href="#">Haut de page </a> ©  Pokiut Api Pokedex 2016</p>
