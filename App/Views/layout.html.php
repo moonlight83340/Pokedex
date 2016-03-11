@@ -40,7 +40,7 @@
                     <div class="form-group">
                       <input placeholder="Password" class="form-control" type="password">
                     </div>
-                    <button type="submit" class="btn btn-success">Connexion</button>
+                    <button id="bouton-connexion-pokedex" type="submit" class="btn btn-success">Connexion</button>
                 </form>
               </div><!--/.navbar-collapse -->
             </div>

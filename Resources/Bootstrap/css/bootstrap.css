@@ -6759,10 +6759,15 @@ button.close {
 }
 
 #navbar-pokedex{
-    background-color: #EA0000;
-    border-color: #EA0000;
+    background-color: #C60404;
+    border-color: #C60404;
 }
 
 #navbar-brand-pokedex{
     color: #fffdfd;
+}
+
+#bouton-connexion-pokedex {
+    background-color: #a10a0a;
+    border-color: #a10a0a;
 }
