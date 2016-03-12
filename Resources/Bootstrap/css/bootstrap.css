@@ -6761,6 +6761,8 @@ button.close {
 #navbar-pokedex{
     background-color: #C60404;
     border-color: #C60404;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 #navbar-brand-pokedex{
@@ -6780,3 +6782,14 @@ button.close {
 #form-connexion-inscription-pokedex{
     
 }
+
+.loader {
+    position : fixed;
+    z-index: 9999;
+    background : url('/Resources/Images/Home/PikachuRunning.gif') 50% 50% no-repeat;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+}
+

@@ -2361,3 +2361,7 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
+$(document).ready(function(){
+    $(".loader").fadeOut(10000);
+});
