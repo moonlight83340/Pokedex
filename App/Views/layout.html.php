@@ -33,6 +33,10 @@
                     <a id="navbar-brand-pokedex" class="navbar-brand" href="<?= \PoireauFramework\Helper\Url::base()?>">Pokiut Api Pokedex</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="navbar-left-pokedex" class="nav navbar-nav">
+                        <li><a href="#">Mini-jeux</a></li>
+                        <li><a href="#">Pokedex</a></li>
+                    </ul>
                     <form id="form-connexion-inscription-pokedex" class="navbar-form navbar-right">
                         <div class="form-group">
                           <input placeholder="Pseudo" class="form-control" type="text">
@@ -94,6 +98,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div id='pokedex-title'>
+            <h1 class="text-center">Pokiut Api Pokedex, Le pokedex du pika'ddicts</h1>
         </div>
         <?= $contents ?>
         <footer>

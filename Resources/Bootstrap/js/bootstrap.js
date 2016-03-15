@@ -2363,5 +2363,48 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 $(document).ready(function(){
-    $(".loader").fadeOut(10000);
+    $(".loader").fadeOut(1000);
+    slideShow();
+    slideToggled();
 });
+
+
+function slideShow(){
+    var counter = 0;
+    var $items = $('.diy-slideshow figure');
+    var numItems = $items.length;
+
+    var showCurrent = function(){
+      var itemToShow = Math.abs(counter%numItems);  
+      $items.removeClass('show');
+      $items.eq(itemToShow).addClass('show');    
+    };
+
+    $('.next').on('click', function(){
+        counter++;
+        showCurrent(); 
+    });
+    $('.prev').on('click', function(){
+        counter--;
+        showCurrent(); 
+    });
+
+    if('ontouchstart' in window){
+      $('.diy-slideshow').swipe({
+        swipeLeft:function() {
+          counter++;
+          showCurrent(); 
+        },
+        swipeRight:function() {
+          counter--;
+          showCurrent(); 
+        }
+      });
+    }
+}
+
+function slideToggled(){
+    $(".toggle").click(function(){
+        $(".toggled",$(this)).slideToggle("slow");
+    });
+}
