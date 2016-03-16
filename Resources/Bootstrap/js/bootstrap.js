@@ -2370,37 +2370,24 @@ $(document).ready(function(){
 
 
 function slideShow(){
-    var counter = 0;
-    var $items = $('.diy-slideshow figure');
+    var cpt = 0;
+    var $items = $('.slideshow figure');
     var numItems = $items.length;
 
     var showCurrent = function(){
-      var itemToShow = Math.abs(counter%numItems);  
+      var itemToShow = Math.abs(cpt%numItems);  
       $items.removeClass('show');
       $items.eq(itemToShow).addClass('show');    
     };
 
     $('.next').on('click', function(){
-        counter++;
+        cpt++;
         showCurrent(); 
     });
     $('.prev').on('click', function(){
-        counter--;
+        cpt--;
         showCurrent(); 
     });
-
-    if('ontouchstart' in window){
-      $('.diy-slideshow').swipe({
-        swipeLeft:function() {
-          counter++;
-          showCurrent(); 
-        },
-        swipeRight:function() {
-          counter--;
-          showCurrent(); 
-        }
-      });
-    }
 }
 
 function slideToggled(){

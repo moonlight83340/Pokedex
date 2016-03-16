@@ -5,7 +5,7 @@
             <div class="loader"></div>
             <h2>Accueil</h2>
             <hr>
-            <div class="diy-slideshow">
+            <div class="slideshow">
                 <figure class="show">
                         <img src="/Resources/Images/Home/Slide/Pokemon.png" width="100%">
                 </figure>
